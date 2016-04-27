@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D25D34AB1CC28297008F922E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D34AA1CC28297008F922E /* main.m */; };
 		D25D34AE1CC28297008F922E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D34AD1CC28297008F922E /* AppDelegate.m */; };
-		D25D34B11CC28297008F922E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D34B01CC28297008F922E /* ViewController.m */; };
 		D25D34B41CC28297008F922E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25D34B21CC28297008F922E /* Main.storyboard */; };
 		D25D34B61CC28298008F922E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25D34B51CC28297008F922E /* Assets.xcassets */; };
 		D25D34B91CC28298008F922E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25D34B71CC28298008F922E /* LaunchScreen.storyboard */; };
@@ -22,6 +21,7 @@
 		D25D34EA1CC2C874008F922E /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D34E91CC2C874008F922E /* Book.m */; };
 		D25D34ED1CC2CACC008F922E /* Series.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D34EC1CC2CACC008F922E /* Series.m */; };
 		D25D34F01CC2CB56008F922E /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D34EF1CC2CB56008F922E /* Movie.m */; };
+		D25D34F81CC2CE2D008F922E /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = D25D34F71CC2CE2D008F922E /* Library.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +46,6 @@
 		D25D34AA1CC28297008F922E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D25D34AC1CC28297008F922E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D25D34AD1CC28297008F922E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D25D34AF1CC28297008F922E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D25D34B01CC28297008F922E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D25D34B31CC28297008F922E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D25D34B51CC28297008F922E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D25D34B81CC28298008F922E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +70,8 @@
 		D25D34EC1CC2CACC008F922E /* Series.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Series.m; sourceTree = "<group>"; };
 		D25D34EE1CC2CB56008F922E /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		D25D34EF1CC2CB56008F922E /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		D25D34F61CC2CE2D008F922E /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
+		D25D34F71CC2CE2D008F922E /* Library.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Library.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,23 +122,9 @@
 		D25D34A81CC28297008F922E /* MovieListMCV */ = {
 			isa = PBXGroup;
 			children = (
-				D25D34AC1CC28297008F922E /* AppDelegate.h */,
-				D25D34AD1CC28297008F922E /* AppDelegate.m */,
-				D25D34AF1CC28297008F922E /* ViewController.h */,
-				D25D34B01CC28297008F922E /* ViewController.m */,
-				D25D34B21CC28297008F922E /* Main.storyboard */,
-				D25D34E51CC2C5CC008F922E /* Item.h */,
-				D25D34F11CC2CC01008F922E /* Subclasses */,
-				D25D34E61CC2C5CC008F922E /* Item.m */,
-				D25D34E21CC2C3DA008F922E /* ItemDetailTableViewController.h */,
-				D25D34E31CC2C3DA008F922E /* ItemDetailTableViewController.m */,
-				D25D34DF1CC2A8F0008F922E /* ItemListTableViewController.h */,
-				D25D34E01CC2A8F0008F922E /* ItemListTableViewController.m */,
-				D25D34DC1CC28E84008F922E /* AddItemTableViewController.h */,
-				D25D34DD1CC28E84008F922E /* AddItemTableViewController.m */,
-				D25D34B51CC28297008F922E /* Assets.xcassets */,
-				D25D34B71CC28298008F922E /* LaunchScreen.storyboard */,
-				D25D34BA1CC28298008F922E /* Info.plist */,
+				D25D34F51CC2CD8E008F922E /* Model */,
+				D25D34F31CC2CD41008F922E /* Controllers */,
+				D25D34F41CC2CD6D008F922E /* View */,
 				D25D34A91CC28297008F922E /* Supporting Files */,
 			);
 			path = MovieListMCV;
@@ -147,6 +133,11 @@
 		D25D34A91CC28297008F922E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D25D34B51CC28297008F922E /* Assets.xcassets */,
+				D25D34AC1CC28297008F922E /* AppDelegate.h */,
+				D25D34B71CC28298008F922E /* LaunchScreen.storyboard */,
+				D25D34BA1CC28298008F922E /* Info.plist */,
+				D25D34AD1CC28297008F922E /* AppDelegate.m */,
 				D25D34AA1CC28297008F922E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -181,6 +172,39 @@
 				D25D34EF1CC2CB56008F922E /* Movie.m */,
 			);
 			name = Subclasses;
+			sourceTree = "<group>";
+		};
+		D25D34F31CC2CD41008F922E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D25D34E21CC2C3DA008F922E /* ItemDetailTableViewController.h */,
+				D25D34E31CC2C3DA008F922E /* ItemDetailTableViewController.m */,
+				D25D34DF1CC2A8F0008F922E /* ItemListTableViewController.h */,
+				D25D34E01CC2A8F0008F922E /* ItemListTableViewController.m */,
+				D25D34DC1CC28E84008F922E /* AddItemTableViewController.h */,
+				D25D34DD1CC28E84008F922E /* AddItemTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D25D34F41CC2CD6D008F922E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D25D34B21CC28297008F922E /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D25D34F51CC2CD8E008F922E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D25D34F11CC2CC01008F922E /* Subclasses */,
+				D25D34E51CC2C5CC008F922E /* Item.h */,
+				D25D34E61CC2C5CC008F922E /* Item.m */,
+				D25D34F61CC2CE2D008F922E /* Library.h */,
+				D25D34F71CC2CE2D008F922E /* Library.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +339,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D25D34B11CC28297008F922E /* ViewController.m in Sources */,
 				D25D34E41CC2C3DA008F922E /* ItemDetailTableViewController.m in Sources */,
 				D25D34F01CC2CB56008F922E /* Movie.m in Sources */,
 				D25D34AE1CC28297008F922E /* AppDelegate.m in Sources */,
@@ -325,6 +348,7 @@
 				D25D34ED1CC2CACC008F922E /* Series.m in Sources */,
 				D25D34E71CC2C5CC008F922E /* Item.m in Sources */,
 				D25D34E11CC2A8F0008F922E /* ItemListTableViewController.m in Sources */,
+				D25D34F81CC2CE2D008F922E /* Library.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

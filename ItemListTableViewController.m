@@ -7,9 +7,12 @@
 //
 
 #import "ItemListTableViewController.h"
+#import "AddItemTableViewController.h"
+#import "Item.h"
+#import "Library.h"
 
 @interface ItemListTableViewController ()
-@property NSMutableArray *myList;
+
 
 @end
 
@@ -19,7 +22,9 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     //_myList=@[@"texto 1",@"texto 2",@"texto 3",@"texto 4"];
-    _myList= [[NSMutableArray alloc] initWithArray:@[@"texto 1",@"texto 2",@"texto 3",@"texto 4"]];
+    //_myList= [[NSMutableArray alloc] initWithArray:@[@"texto 1",@"texto 2",@"texto 3",@"texto 4"]];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUI:) name:@"DidUpadateItems" object:nil];
+    _library = [[Library alloc] init];
     
 }
 
@@ -29,27 +34,28 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _myList.count;
+    return _library.numberOfItems;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"itemCell" forIndexPath:indexPath];
     
-    NSString *text = _myList[indexPath.row];
-    cell.textLabel.text = text;
+    Item *item =[_library itemForIndex:indexPath.row];
+    cell.textLabel.text = item.title;
+    cell.detailTextLabel.text = item.year;
     
     return cell;
+}
+
+#pragma mark - Observer Methods
+-(void)updateUI:(NSNotification *)notification{
+    [self.tableView reloadData];
 }
 
 #pragma mark - TableView Delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *text = _myList[indexPath.row];
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Descrição" message:text preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action  = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
-    [alert addAction:action];
-    [self presentViewController:alert animated:YES completion:nil];
-    
+
 }
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -57,9 +63,14 @@
 }
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (editingStyle==UITableViewCellEditingStyleDelete) {
-        [_myList removeObjectAtIndex:indexPath.row];
-        [tableView reloadData];
+
+}
+
+#pragma mark - Navigation
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"AddItem"]) {
+        AddItemTableViewController *vc = ((UINavigationController *)segue.destinationViewController).visibleViewController;
+        vc.library = _library;
     }
 }
 

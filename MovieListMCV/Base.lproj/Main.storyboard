@@ -46,7 +46,7 @@
                     <navigationItem key="navigationItem" title="Biblioteca" id="oXh-f4-zBR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Qbi-sK-0Bl">
                             <connections>
-                                <segue destination="sQ7-K3-J0x" kind="presentation" id="ADm-oc-PXj"/>
+                                <segue destination="sQ7-K3-J0x" kind="presentation" identifier="AddItem" id="ADm-oc-PXj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

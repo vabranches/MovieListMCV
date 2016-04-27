@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Library;
 
 @interface AddItemTableViewController : UITableViewController
-
+@property Library *library;
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Library;
 
 @interface ItemListTableViewController : UITableViewController
-
+@property (strong, nonatomic) Library *library;
 @end
